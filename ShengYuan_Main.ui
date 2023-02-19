@@ -38,7 +38,7 @@
     <bool>false</bool>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>3</number>
    </property>
    <property name="movable">
     <bool>true</bool>
@@ -310,11 +310,6 @@ margin-top: 0.5ex;</string>
            <string>入料機1</string>
           </property>
          </item>
-         <item>
-          <property name="text">
-           <string>入料機2</string>
-          </property>
-         </item>
         </widget>
         <widget class="QComboBox" name="comboBox_3">
          <property name="geometry">
@@ -363,7 +358,7 @@ margin-top: 0.5ex;</string>
           <string>未連線</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="pushButton_set">
          <property name="geometry">
           <rect>
            <x>320</x>
@@ -578,9 +573,25 @@ margin-top: 0.5ex;</string>
      </layout>
     </widget>
    </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>即時溫度曲線</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1081</width>
+       <height>801</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_temp"/>
+    </widget>
+   </widget>
    <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string>即時採樣曲線</string>
+     <string>即時計數曲線</string>
     </attribute>
     <widget class="QWidget" name="verticalLayoutWidget">
      <property name="geometry">
@@ -591,14 +602,7 @@ margin-top: 0.5ex;</string>
        <height>801</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_9">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_cnt"/>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_temp"/>
-      </item>
-     </layout>
+     <layout class="QVBoxLayout" name="verticalLayout_cnt"/>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_2">
@@ -635,10 +639,10 @@ QGroupBox::title {
      <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>50</y>
+        <x>20</x>
+        <y>40</y>
         <width>101</width>
-        <height>16</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -655,9 +659,9 @@ QGroupBox::title {
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>50</y>
+        <y>39</y>
         <width>741</width>
-        <height>20</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">

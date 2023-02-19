@@ -59,7 +59,7 @@ class ShengYuan_Main(QMainWindow, Ui_ShengYuan_Main):
         self.dtaxisX_cnt.setMin(0)
         self.dtaxisX_cnt.setMax(500)
         self.dtaxisX_cnt.setTickCount(10)
-        self.dtaxisX_cnt.setTitleText("Time")
+        self.dtaxisX_cnt.setTitleText("時間")
 
         # 設定Y軸
         self.vlaxisY_cnt = QtCharts.QValueAxis()
@@ -93,17 +93,12 @@ class ShengYuan_Main(QMainWindow, Ui_ShengYuan_Main):
         # 初始化ACC X數據
         self.serial_input_temp = QtCharts.QSplineSeries()
         self.serial_input_temp.setName("入料溫度")
-        self.serial_input_temp.setColor(QColor("blue"))
-
-        self.serial_output_temp = QtCharts.QSplineSeries()
-        self.serial_output_temp.setName("出料溫度")
-        self.serial_output_temp.setColor(QColor("red"))
+        self.serial_input_temp.setColor(QColor("red"))
 
         # 設定Chart
         self.mchart_temp =QtCharts.QChart()
         self.mchart_temp.setTitle("溫度曲線")   # self.mchart.setWindowTitle("Title")
         self.mchart_temp.addSeries(self.serial_input_temp)
-        self.mchart_temp.addSeries(self.serial_output_temp)
         # self.mchart.createDefaultAxes()
 
         # 設定X軸
@@ -111,7 +106,7 @@ class ShengYuan_Main(QMainWindow, Ui_ShengYuan_Main):
         self.dtaxisX_temp.setMin(0)
         self.dtaxisX_temp.setMax(500)
         self.dtaxisX_temp.setTickCount(10)
-        self.dtaxisX_temp.setTitleText("Time")
+        self.dtaxisX_temp.setTitleText("時間")
 
         # 設定Y軸
         self.vlaxisY_temp = QtCharts.QValueAxis()
@@ -127,9 +122,6 @@ class ShengYuan_Main(QMainWindow, Ui_ShengYuan_Main):
         self.serial_input_temp.attachAxis(self.dtaxisX_temp)
         self.serial_input_temp.attachAxis(self.vlaxisY_temp)
 
-        self.serial_output_temp.attachAxis(self.dtaxisX_temp)
-        self.serial_output_temp.attachAxis(self.vlaxisY_temp)
-
         # 設定CV
         cv = QtCharts.QChartView(self.mchart_temp)
         cv.chart().setBackgroundBrush(QColor("white"))
@@ -142,14 +134,12 @@ class ShengYuan_Main(QMainWindow, Ui_ShengYuan_Main):
         tag_data = TagData()        
         self.yvalueList = tag_data.data
         
-        self.serial_acc_x.clear()
-        self.serial_acc_y.clear()
-        self.serial_acc_z.clear()
+        self.serial_input_cnt.clear()
+        self.serial_output_cnt.clear()
 
         for idx,val in enumerate(self.yvalueList):
-            self.serial_acc_x.append(idx, val[5])
-            self.serial_acc_y.append(idx, val[6])
-            self.serial_acc_z.append(idx, val[7])
+            self.serial_input_cnt.append(idx, val[5])
+            self.serial_output_cnt.append(idx, val[6])
 
 
 class ShengYuanDriver():

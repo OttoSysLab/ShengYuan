@@ -224,24 +224,23 @@ class Ui_ShengYuan_Main(object):
         self.verticalLayout_8.addWidget(self.groupBox_7)
 
         self.tabWidget.addTab(self.tab_Main, "")
+        self.tab_4 = QWidget()
+        self.tab_4.setObjectName(u"tab_4")
+        self.layoutWidget = QWidget(self.tab_4)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(0, 0, 1081, 801))
+        self.verticalLayout_temp = QVBoxLayout(self.layoutWidget)
+        self.verticalLayout_temp.setObjectName(u"verticalLayout_temp")
+        self.verticalLayout_temp.setContentsMargins(0, 0, 0, 0)
+        self.tabWidget.addTab(self.tab_4, "")
         self.tab = QWidget()
         self.tab.setObjectName(u"tab")
         self.verticalLayoutWidget = QWidget(self.tab)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
         self.verticalLayoutWidget.setGeometry(QRect(0, 0, 1081, 801))
-        self.verticalLayout_9 = QVBoxLayout(self.verticalLayoutWidget)
-        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_cnt = QVBoxLayout()
+        self.verticalLayout_cnt = QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout_cnt.setObjectName(u"verticalLayout_cnt")
-
-        self.verticalLayout_9.addLayout(self.verticalLayout_cnt)
-
-        self.verticalLayout_temp = QVBoxLayout()
-        self.verticalLayout_temp.setObjectName(u"verticalLayout_temp")
-
-        self.verticalLayout_9.addLayout(self.verticalLayout_temp)
-
+        self.verticalLayout_cnt.setContentsMargins(0, 0, 0, 0)
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QWidget()
         self.tab_2.setObjectName(u"tab_2")
@@ -399,7 +398,7 @@ class Ui_ShengYuan_Main(object):
 
         self.retranslateUi(ShengYuan_Main)
 
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(ShengYuan_Main)
@@ -439,7 +438,8 @@ class Ui_ShengYuan_Main(object):
         self.lineEdit_7.setText(QCoreApplication.translate("ShengYuan_Main", u"2023-01-01 23:59:59", None))
         self.lineEdit_8.setText(QCoreApplication.translate("ShengYuan_Main", u"23:59:59", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Main), QCoreApplication.translate("ShengYuan_Main", u"\u5373\u6642\u72c0\u614b\u770b\u677f", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("ShengYuan_Main", u"\u5373\u6642\u63a1\u6a23\u66f2\u7dda", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), QCoreApplication.translate("ShengYuan_Main", u"\u5373\u6642\u6eab\u5ea6\u66f2\u7dda", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("ShengYuan_Main", u"\u5373\u6642\u8a08\u6578\u66f2\u7dda", None))
         self.groupBox_5.setTitle(QCoreApplication.translate("ShengYuan_Main", u"\u67e5\u8a62\u8a2d\u5b9a", None))
         self.label_7.setText(QCoreApplication.translate("ShengYuan_Main", u"\u6a94\u6848\u8def\u5f91:", None))
         self.lineEdit_5.setText(QCoreApplication.translate("ShengYuan_Main", u"C:\\workspace\\ShengYuanSCADA", None))
